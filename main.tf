@@ -3,7 +3,7 @@ resource "openstack_compute_instance_v2" "instance" {
   image_name      = "${var.image}"
   flavor_name     = "${var.flavor}"
   key_pair        = "${var.keypair}"
-  security_groups = ["default"]
+  security_groups = "${var.security_groups}"
   network {
     uuid = "${var.internalnetwork}"
   }

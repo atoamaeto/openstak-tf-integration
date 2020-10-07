@@ -21,3 +21,7 @@ variable "internalnetwork" {
 variable "externalnetwork" {
   default = "YOUR-EXTERNAL-NETWORK-NAME"
 }
+
+variable "security_groups" {
+  default = "YOUR-SECURITY-GROUP-NAME"
+}
