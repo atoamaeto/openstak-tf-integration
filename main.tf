@@ -17,3 +17,12 @@ resource "openstack_compute_floatingip_associate_v2" "floating_ip" {
   floating_ip = "${openstack_networking_floatingip_v2.floating_ip.address}"
   instance_id = "${openstack_compute_instance_v2.instance.id}"
 }
+
+
+output "floatingip" {
+  value = "${openstack_networking_floatingip_v2.floating_ip.address}"
+}
+
+output "instance_name" {
+  value = "${openstack_compute_instance_v2.instance.name}"
+}
